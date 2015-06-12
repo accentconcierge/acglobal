@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
 
+scope '/admin' do
+  resources :orders
+end
+
   root 'users#home'
+
+  devise_for :admins
+  devise_for :users, controller: :users
+    scope "/admin" do
+    resources :users, only: [:index, :show, :new]
+
+
+  end
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

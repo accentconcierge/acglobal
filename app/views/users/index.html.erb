@@ -1,0 +1,35 @@
+<center><h1>USERS</h1></center>
+<div class = 'container' style = 'width:750px'>
+<br><br>
+<center><%=link_to 'New User', new_user_path %> </center>
+<br><br>
+		<table class = 'table table-hover'>
+			<thead>
+				<th>User ID </th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone Number</th>
+				<th>View</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+					<tr>
+						<td><%= user.id %></td>
+						<td><%= user.first_name %></td>
+						<td><%= user.last_name %></td>
+						<td><%= user.email %></td>
+						<td><%= user.country_code %><%= user.phone_number %></td>
+						<td><%= link_to 'View', user %></td>
+						<td><%= link_to 'Edit', '#' %></td>
+						<td><%= link_to 'Delete', '#' %></td>
+					</tr>
+				<%end%>
+			</tbody>
+		</table>
+
+
+
+</div>

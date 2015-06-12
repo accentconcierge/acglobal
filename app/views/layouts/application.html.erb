@@ -1,18 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Accent</title>
+  <title>Accent Global</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!--fonts-->
+   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+	<div id="header-wrap">
 
-<% flash.each do |name, msg| %>
+
+    <div class="menu">
+
+      <!-- Menu icon -->
+      
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+        <% if user_signed_in? %> 
+                <ul>
+                  <center><img src='http://upload.wikimedia.org/wikipedia/commons/1/13/Daniel_Ingram_Profile.png' style= 'width:100px;height:100px;border-radius:50px;'>
+                  <li><h2>@<%= current_user.first_name %><%= current_user.last_name %></h2></li> 
+                  <hr style='width: 200px;color: black;'>
+                  <% if admin_signed_in? %>
+                    <li><%= link_to "Home", '#' %></li>
+                    <li><%= link_to "Users", '#' %></li>
+                    <li><%= link_to "History", '#' %></li>
+                    <li><%= link_to "Log out",  destroy_user_session_path, method: :delete %></li>
+                  <%else%>
+                  <li><%= link_to "Dashboard", user_path(@user) %></li>
+                  <li><%= link_to "Request", '#' %></li> 
+                  <li><%= link_to "Vault", '#'%></li> 
+                  <li><%= link_to "Settings", edit_user_registration_path %></li> 
+                  <li><%= link_to "Share", '#' %></li> 
+                  <li><%= link_to "Support", '#'%></li> 
+                  <li><%= link_to "Log out",  destroy_user_session_path, method: :delete %></li> 
+                  <%end%>
+                </center>
+                </ul>  
+        
+        <% else %> 
+                <ul> 
+                  <center>
+                  <li><%= link_to "Login", new_user_session_path %></a></li> 
+                  <li><%= link_to "Signup", new_user_registration_path %></a></li> 
+                  <li><%= link_to "Home", root_path %></a></li> 
+                  </center>
+                </ul> 
+        <% end %>
+        
+        <br><br>
+        <center><p>© 2014-2015 Accent Global</p></center>
+    </div>
+
+    <!-- Main body -->
+    
+  
+       <div class="icon-menu">
+       <i class="fa fa-bars"></i>
+        <span class="color">ACCENT</span>
+      </div>
+
+
+      
+ 
+
+<div class = 'content'>
+	<% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-<% end %>
+	<% end %>
 <%= yield %>
+</div>
+
+
+
+  <script>
+      var c=0, words=['Welcome','Bienvenido','Namaste','Welkom','Bienvenue'];
+
+
+      function loop(){
+        $('h2 span').delay(2000).fadeTo(800,0,function(){
+           $(this).text( words[++c%words.length]).fadeTo(800,1,loop);
+        });
+      }
+
+      loop();
+
+  </script>
+
+
+
+
 
 </body>
 </html>

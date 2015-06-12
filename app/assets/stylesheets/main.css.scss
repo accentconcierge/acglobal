@@ -1,1 +1,138 @@
 @import 'bootstrap';
+
+.color{
+  color: #3498db;
+}
+
+.styling {
+  border-radius: 20px;
+}
+
+/* Initial body */
+body {
+  left: 0;
+  margin: 0;
+  /*overflow: hidden;*/
+  position: relative;
+}
+
+/* Initial menu */
+.menu {
+  background: white;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+  border-right: 1px solid black;
+}
+
+.content{
+  position: relative;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  background-image: url('http://accentconcierge.com/images/job3.png'); 
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+    padding-left: 450px;
+    padding-top: 50px;
+}
+.jumbotron p {
+    color: white;
+    padding-left: 500px
+   
+}
+
+
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+	color: black;
+	display: block;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 0px;
+  padding-top: 3px;
+  transition: background 0.5s, color 0.5s;
+}
+
+.menu ul li a:hover {
+  color: white;
+  display: block;
+  background-color: #3498db;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+  width: 100%;
+}
+
+.menu a {
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: black;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+/*for typed js*/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
