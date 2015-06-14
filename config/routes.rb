@@ -11,9 +11,9 @@ end
     scope "/admin" do
     resources :users, only: [:index, :show, :new]
 
-
   end
   
+  get 'users/show' => 'users#show', as: 'dashboard'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 gem 'typedjs-rails', '~> 1.0.2'
 gem 'paperclip', '~> 4.2'
 gem 'devise'
+
 group :production do
 
 	gem 'pg'

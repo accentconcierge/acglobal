@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class ='html'>
 <head>
   <title>Accent Global</title>
 
@@ -17,7 +17,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class = 'body'>
 
 	<div id="header-wrap">
 
@@ -42,12 +42,12 @@
                     <li><%= link_to "History", '#' %></li>
                     <li><%= link_to "Log out",  destroy_user_session_path, method: :delete %></li>
                   <%else%>
-                  <li><%= link_to "Dashboard", user_path(@user) %></li>
-                  <li><%= link_to "Request", '#' %></li> 
-                  <li><%= link_to "Vault", '#'%></li> 
+                  <li><%= link_to "Dashboard", dashboard_path %></li>
+                  <li><a href="sms:/* 6154842917 */&body=/* I'm Ready */">Request(Mobile Only)</a></li>
+                  <li><%= link_to "Vault", 'http://althealth2.weebly.com/services.html'%></li> 
                   <li><%= link_to "Settings", edit_user_registration_path %></li> 
-                  <li><%= link_to "Share", '#' %></li> 
-                  <li><%= link_to "Support", '#'%></li> 
+                  <li><%= link_to "Share", 'http://http://althealth2.weebly.com/share.html' %></li> 
+                  <li><%= link_to "Support", 'http://althealth2.weebly.com/support' %></li> 
                   <li><%= link_to "Log out",  destroy_user_session_path, method: :delete %></li> 
                   <%end%>
                 </center>
