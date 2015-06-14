@@ -1,4 +1,7 @@
 @import 'bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
 
 .color{
   color: #3498db;
@@ -135,6 +138,88 @@ body {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+
+
+
+/////////////
+
+
+
+
+
+#textchanger{
+  font-size: 70px;
+  font-family: 'Ubuntu', sans-serif;
+}
+#textchanger2{
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+.inputme{
+  height: 40px;
+  width: 300px;
+  margin-top: 60px;
+  font-size: 30px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white white #3498db white;
+  font-family: 'Raleway', 'sans-serif';
+  outline: 0px;
+  text-align: center;
+}
+
+
+.submitbutton{
+  border-radius: 30px;
+  width: 240px;
+  height: 60px;
+  font-family:'Raleway', 'sans-serif';
+  color: white;
+  background-color: #3498db;
+  margin-top: 50px;
+  font-size: 24px;
+  border: solid;
+  outline: 0px;
+}
+
+
+.textchanger3{
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 10px;
+  padding-right:20px;
+}
+
+.learnmore{
+  border-radius: 30px;
+  width: 240px;
+  height: 60px;
+  font-family:'Raleway', 'sans-serif';
+  color: white;
+  background-color: #3498db;
+  margin-top: 50px;
+  font-size: 24px;
+  border: solid;
+  outline: 0px;
+}
+
+.subheader{
+  font-size:40px;
+  font-family: 'Raleway', 'sans-serif';
+  margin-top: 20px;
+  margin-left:100px;
+  margin-right:100px;
+}
+
+
+
+
+table, th, td{
+  border: 1px solid black;
 }
 
 
