@@ -14,6 +14,8 @@ gem 'jquery-turbolinks'
 gem 'typedjs-rails', '~> 1.0.2'
 gem 'paperclip', '~> 4.2'
 gem 'devise'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'figaro'
 
 group :production do
 

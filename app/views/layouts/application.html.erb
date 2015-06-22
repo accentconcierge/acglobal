@@ -5,7 +5,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://js.stripe.com/v2/', 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_tag "Stripe.publishableKey = '#{Rails.configuration.stripe[:publishable_key]}';", type: 'text/javascript' %>
 
   <!--fonts-->
    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -15,7 +16,10 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
 		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 
+  
   <%= csrf_meta_tags %>
+  
+
 </head>
 <body class = 'body'>
 
@@ -33,7 +37,7 @@
       <!-- Menu -->
         <% if user_signed_in? %> 
                 <ul>
-                  <center><img src='http://upload.wikimedia.org/wikipedia/commons/1/13/Daniel_Ingram_Profile.png' style= 'width:100px;height:100px;border-radius:50px;'>
+                  <center>
                   <li><h2>@<%= current_user.first_name %><%= current_user.last_name %></h2></li> 
                   <hr style='width: 200px;color: black;'>
                   <% if admin_signed_in? %>
