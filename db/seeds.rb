@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Admin.create = (email: vyasa@accent.global, password: gauranitai108, password_confirmation: gauranitai108)
+Admin.create = (email: vyasa@accent.global, password: admin, password_confirmation: admin)
