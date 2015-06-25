@@ -1,7 +1,14 @@
+<%= render 'layouts/adminbar' %>
+<ul class="nav nav-tabs">
+  <li role="presentation" class='active'><a href="#">Users</a></li>
+  <li role="presentation"><a href="#">Orders</a></li>
+  <li role="presentation"><a href="#">Feedback</a></li>
+  <li role="presentation"><a href="#">Partners</a></li>
+</ul>
 <center><h1>USERS</h1></center>
 <div class = 'container' style = 'width:750px'>
 <br><br>
-<center><%=link_to 'New User', new_user_registration %> </center>
+<center><%=link_to 'New User', new_user_path %> </center>
 <br><br>
 		<table class = 'table table-hover'>
 			<thead>

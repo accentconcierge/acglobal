@@ -1,20 +1,23 @@
+
+
 <!DOCTYPE html>
 <html class ='html'>
 <head>
   <title>Accent Global</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'https://js.stripe.com/v2/', 'application', 'data-turbolinks-track' => true %>
   <%= javascript_tag "Stripe.publishableKey = '#{Rails.configuration.stripe[:publishable_key]}';", type: 'text/javascript' %>
 
-  <!--fonts-->
    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
-		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 
   
   <%= csrf_meta_tags %>
@@ -23,7 +26,7 @@
 </head>
 <body class = 'body'>
 
-	<div id="header-wrap">
+  <div id="header-wrap">
 
 
     <div class="menu">
@@ -52,6 +55,7 @@
                   <li><%= link_to "Settings", edit_user_registration_path %></li> 
                   <li><%= link_to "Share", 'http://http://althealth2.weebly.com/share.html' %></li> 
                   <li><%= link_to "Support", 'http://althealth2.weebly.com/support' %></li> 
+                  <li><%= link_to "Site Feedback", 'http://althealth2.weebly.com/support' %></li> 
                   <li><%= link_to "Log out",  destroy_user_session_path, method: :delete %></li> 
                   <%end%>
                 </center>
@@ -84,9 +88,9 @@
  
 
 <div class = 'content'>
-	<% flash.each do |name, msg| %>
+  <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-	<% end %>
+  <% end %>
 <%= yield %>
 </div>
 
@@ -130,4 +134,4 @@ olark.identify('3209-637-10-7675');/*]]>*/</script><noscript><a href="https://ww
 
 
 </body>
-</html>
+</html> 

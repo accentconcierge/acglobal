@@ -7,6 +7,7 @@
   color: #3498db;
 }
 
+
 .styling {
   border-radius: 20px;
 }
@@ -152,6 +153,7 @@ body {
 #textchanger{
   font-size: 70px;
   font-family: 'Ubuntu', sans-serif;
+  color: white;
 }
 #textchanger2{
   font-size: 40px;
@@ -192,6 +194,7 @@ body {
   font-family: 'Raleway', sans-serif;
   padding-top: 10px;
   padding-right:20px;
+  color: white;
 }
 
 .learnmore{
@@ -213,9 +216,55 @@ body {
   margin-top: 20px;
   margin-left:100px;
   margin-right:100px;
+  color: white;
 }
 
+.style {
+    border-bottom: 5px solid orange; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+   # width: 700px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Raleway', 'sans-serif';
 
+}
+.field {
+  margin-bottom: 50px;
+  outline: transparent;
+  background: transparent;
+  width: 500px;
+}
+.moreinfo{
+  background-color: #3498db;
+  height: 40px;
+  width: 700px;
+  color: white;
+  font-size: 25px;
+  border-radius: 20px;
+}
 
+.background {
+  
+
+background-image: url('http://lh-concierge.com/images/backgrounds/contact.jpg'); 
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+
+          }
 
 

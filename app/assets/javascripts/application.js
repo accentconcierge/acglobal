@@ -17,3 +17,4 @@
 //= require typed
 //= require jquery.turbolinks
 //= require_tree .
+//= require fastclick

@@ -3,27 +3,33 @@
 	
 
 	<h2><span class='color'> Welcome</span> <%= current_user.first_name %></h2>
-
-
-	<h3> SMS: 678.xxx.xxxx </h3><br>
-	Billing  |   What You Can Do Next.   |   Pages 
+<br><br>
+Get started by texting your request to this number:<br>
+	<h3> 678.xxx.xxxx </h3><br>
+	
 
 	<br><br><br><br>
 <div class = 'container'>
 	<table class="table table-hover" style = 'width: 70%'>
 		<thead>
 		<tr>
+
+		
+		<th> ID </th>
+		<th> Date </th>
 		<th>Service</th>
 		<th>Charge</th>
 		<th>Feedback</th>
-		<th>Tip</th>
+		<th>Receipt</th>
 		</tr>
 	</thead>
 	<tbody>
+		<% @orders.each do |order| %>
 	 <tr>
-	 		
-	    <td></td>
-	    <td>10.00</td> 
+	 	  <td><% order.id %></td>
+	 		<td><% order.date %> </td>
+	    <td><% order.service %></td>
+	    <td><% order.charge %></td> 
 	    <td>
 	    
 					    	<!-- Trigger the modal with a button -->
@@ -40,7 +46,7 @@
 				        <center><h4 class="modal-title">Leave Feedback</h4></center>
 				      </div>
 				      <div class="modal-body">
-				        <p>Some text in the modal.</p>
+				        
 				      </div>
 				      <div class="modal-footer">
 				        <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
@@ -50,37 +56,27 @@
 				  </div>
 				</div>
 		</td>
-	    <td>
-	    				    	<!-- Trigger the modal with a button -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Leave Tip</button>
-
-				<!-- Modal -->
-				<div id="myModal" class="modal fade" role="dialog">
-				  <div class="modal-dialog">
-
-				    <!-- Modal content-->
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <button type="button" class="close" data-dismiss="modal">&times;</button>
-				        <center><h4 class="modal-title">Leave Tip</h4></center>
-				      </div>
-				      <div class="modal-body">
-				        <p>Thanks!</p>
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-				      </div>
-				    </div>
-
-				  </div>
-				</div>
-
-	    </td>
+		<td>
+			<%= button_to 'Request','https://dashboard.stripe.com/emails/receipts/pmtrc_16Gcb2LGLAjyT6fJBXmsGdh6', 
+				class: 'btn btn-info' %>
+		</td>
+	   
 	  </tr>
+	 <% end %>
 	</tbody>
 	</table>
 </div>
-QUICKLINKS
+<br><br>
+<h2>Quicklinks</h2>
+<br>
+Ideas<br>
+How to Get Started<br>
+Share<br>
+Settings<br>
+Support<br>
+Blog<br>
+FAQ<br>
+Billing Support<br>
 
 </center>
 
