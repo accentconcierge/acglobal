@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   
   get 'users/show' => 'users#show', as: 'dashboard'
   get 'users/admin_dashboard' => 'users#admin_dashboard', as: 'adminpanel'
-
+  get 'users/grocery_list' => 'users#grocery_list', as: 'grocery'
+  get 'users/other' => 'users#other'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

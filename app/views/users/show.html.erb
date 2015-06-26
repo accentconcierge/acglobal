@@ -2,7 +2,7 @@
 
 	
 
-	<h2><span class='color'> Welcome</span> <%= current_user.first_name %></h2>
+<h2><span class='color'> Welcome</span> <%= current_user.first_name %></h2>
 <br><br>
 Get started by texting your request to this number:<br>
 	<h3> 678.xxx.xxxx </h3><br>
@@ -11,26 +11,23 @@ Get started by texting your request to this number:<br>
 	<br><br><br><br>
 <div class = 'container'>
 	<table class="table table-hover" style = 'width: 70%'>
-		<thead>
-		<tr>
-
-		
-		<th> ID </th>
-		<th> Date </th>
-		<th>Service</th>
-		<th>Charge</th>
-		<th>Feedback</th>
-		<th>Receipt</th>
-		</tr>
-	</thead>
+			<thead>
+				<tr>
+					<th> ID </th>
+					<th> Date </th>
+					<th>Service</th>
+					<th>Charge</th>
+					<th>Feedback</th>
+				</tr>
+			</thead>
 	<tbody>
-		<% @orders.each do |order| %>
+		<% User.all.each do |user| %>
 	 <tr>
-	 	  <td><% order.id %></td>
-	 		<td><% order.date %> </td>
-	    <td><% order.service %></td>
-	    <td><% order.charge %></td> 
-	    <td>
+	 	  <td><% user.order.id %></td>
+	 		<td><% user.order.date %> </td>
+	    <td><% user.order.service %></td>
+	    <td><% user.order.charge %></td> 
+	   <td>
 	    
 					    	<!-- Trigger the modal with a button -->
 				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Leave Feedback</button>
@@ -56,10 +53,7 @@ Get started by texting your request to this number:<br>
 				  </div>
 				</div>
 		</td>
-		<td>
-			<%= button_to 'Request','https://dashboard.stripe.com/emails/receipts/pmtrc_16Gcb2LGLAjyT6fJBXmsGdh6', 
-				class: 'btn btn-info' %>
-		</td>
+	
 	   
 	  </tr>
 	 <% end %>
@@ -71,13 +65,12 @@ Get started by texting your request to this number:<br>
 <br>
 Ideas<br>
 How to Get Started<br>
-Share<br>
-Settings<br>
 Support<br>
 Blog<br>
-FAQ<br>
+Knowledgebase<br>
 Billing Support<br>
-
+Forum<br>
+<br><br><br>
 </center>
 
 
