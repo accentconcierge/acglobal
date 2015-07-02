@@ -21,12 +21,12 @@ Get started by texting your request to this number:<br>
 				</tr>
 			</thead>
 	<tbody>
-		<% User.all.each do |user| %>
+		<% Order.all.each do |orders| %>
 	 <tr>
-	 	  <td><% user.order.id %></td>
-	 		<td><% user.order.date %> </td>
-	    <td><% user.order.service %></td>
-	    <td><% user.order.charge %></td> 
+	 	  <td><%= orders.user.id %></td>
+	 	  <td><%= orders.created_at %></td>
+	 	  <td><%= orders.service %></td>
+	 	  <td><%= orders.charge %></td>
 	   <td>
 	    
 					    	<!-- Trigger the modal with a button -->

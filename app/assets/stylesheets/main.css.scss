@@ -3,6 +3,20 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:100);
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
 
+
+.home { 
+  background: url(http://cdn2.hubspot.net/hub/352767/file-1446095825-jpg/A-su-servicio-DirectButler.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar-fixed {
+    min-height: 90px;
+}
+
+
 .color{
   color: #3498db;
 }
@@ -256,15 +270,5 @@ body {
   border-radius: 20px;
 }
 
-.background {
-
-background-image: url('http://lh-concierge.com/images/backgrounds/contact.jpg'); 
-  height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-
-          }
 
 

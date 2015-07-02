@@ -25,8 +25,8 @@
 
 </head>
 <body class = 'body'>
-
-  <div id="header-wrap">
+  <% if user_signed_in? %>
+    <div id="header-wrap">
 
 
     <div class="menu">
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Menu -->
-        <% if user_signed_in? %> 
+       
                 <ul>
                   <center>
                   <li><h2>@<%= current_user.first_name %><%= current_user.last_name %></h2></li> 
@@ -60,15 +60,9 @@
                 </center>
                 </ul>  
         
-        <% else %> 
-                <ul> 
-                  <center>
-                  <li><%= link_to "Login", new_user_session_path %></a></li> 
-                  <li><%= link_to "Signup", new_user_registration_path %></a></li> 
-                  <li><%= link_to "Home", root_path %></a></li> 
-                  </center>
-                </ul> 
-        <% end %>
+        
+                
+     
         
         <br><br>
         <center><p>© 2014-2015 Accent Global</p></center>
@@ -81,8 +75,8 @@
        <i class="fa fa-bars"></i>
         <span class="color">ACCENT</span>
       </div>
-
-
+<%else%>
+<%end%>
       
  
 
